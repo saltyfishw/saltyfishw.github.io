@@ -33,5 +33,20 @@ gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 
+# fix: csv was loaded from the standard library, but will no longer be part of the default gems starting from Ruby 3.4.0.
+# You can add csv to your Gemfile or gemspec to silence this warning.
+gem 'csv'
+
+# install theme
 gem 'jekyll-include-cache'
 gem "minimal-mistakes-jekyll"
+
+# fix: /opt/homebrew/lib/ruby/gems/3.3.0/gems/safe_yaml-1.0.5/lib/safe_yaml/load.rb:22: warning: base64 was loaded from the standard library, 
+# but will no longer be part of the default gems starting from Ruby 3.4.0.
+# You can add base64 to your Gemfile or gemspec to silence this warning.
+gem "base64"
+
+
+# fix: Configuration file: /Users/wangke3/Code/GitHub/saltyfishw.github.io/_config.yml
+# To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+gem "faraday-retry"
